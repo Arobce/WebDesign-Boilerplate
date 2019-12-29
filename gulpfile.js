@@ -25,7 +25,7 @@ const paths = {
     }
 };
 
-//Scss To CSS
+//Scss To Minified CSS
 const scssToMinifiedCss = () =>
     gulp.src(paths.scss.src)
         .pipe(sass().on('error', sass.logError)).pipe(sass({ includePaths: ['./scss'] }))
