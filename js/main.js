@@ -1,1 +1,3 @@
-function asdf(){console.log("asf")}
+function foo(){
+    console.log("asf")
+}

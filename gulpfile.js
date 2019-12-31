@@ -11,13 +11,13 @@ const paths = {
         src: "scss/*.scss",
         dest: "./",
         watch: "./scss/**/*.scss",
-        destFile : "style.css"
+        destFile: "style.css"
     },
     js: {
         src: "./js/*.js",
         dest: "./js/minified",
         watch: "./js/*.js",
-        destFileIndicator : "-min"
+        destFileIndicator: ".min"
     },
     images: {
         src: "./assets/images/*",
@@ -60,7 +60,7 @@ const watchModified = () => {
 }
 
 const watchAdded = () => {
-    gulp.watch('./assets/images', {events: ['add']}, gulp.series(compressImages));
+    gulp.watch('./assets/images', { events: ['add'] }, gulp.series(compressImages));
 }
 
 const watch = () => {
@@ -69,6 +69,4 @@ const watch = () => {
 }
 
 
-exports.default = () => {
-    watch();
-};
+exports.default = () => watch();
